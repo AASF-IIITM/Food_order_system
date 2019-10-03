@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main() {
+	int price = 0, c, v;
+	while(1) {
+	printf("Enter your choice...\n1. Pizza\n2. Burger\n3. Wrap\n");
+	scanf("%d", &c);
+	printf("Enter category...\n1. Veg\n2. Chicken\n");
+	scanf("%d", &v);
+	if(v == 1) {
+		switch(c) {
+			case 1: price += 100; break;
+			case 2: price += 80; break;
+			case 3: price += 70; break;
+			default: printf("Enter correct choice\n");
+		}
+	} else if(v == 2) {
+		switch(c) {
+			case 1: price += 150; break;
+			case 2: price += 110; break;
+			case 3: price += 90; break;
+			default: printf("Enter correct choice\n");
+		}
+	} else printf("Enter Correct Choice\n");
+	printf("Would you like to add more items?\n1. YES\n2. no\n");
+	scanf("%d", &c);
+	if(c != 1) {
+		printf("Final order price is : Rs. %d", price);
+		break;
+	}
+}   
+	
+	return 0;
+}
